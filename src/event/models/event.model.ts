@@ -2,8 +2,6 @@ import { Field, InputType, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 import { UserModel } from '../../users/models/user.model';
-// import { OrganizationModel } from '../../organization/models/organization.model';
-import { CommentModel } from '../../comments/models/comment.model';
 
 @ObjectType()
 @InputType('EventInput')
