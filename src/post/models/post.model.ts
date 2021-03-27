@@ -16,6 +16,8 @@ export class PostModel {
     @Prop()
     description: string;
 
+    // event
+
     @Field(() => [CommentModel])
     @Prop([{ type: MongooseSchema.Types.ObjectId, ref: "CommentModel" }])
     comments: CommentModel[];

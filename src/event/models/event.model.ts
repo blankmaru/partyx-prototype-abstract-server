@@ -40,6 +40,11 @@ export class EventModel {
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: "UserModel" })
     going?: UserModel[];
 
+    // date start
+    // date end
+    // price
+    // security
+
     @Field(() => String, { nullable: true })
     @Prop()
     date?: String;
