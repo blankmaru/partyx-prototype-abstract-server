@@ -16,7 +16,7 @@ export class EventModel {
     @Prop()
     title?: string;
 
-    @Field(() => [String])
+    @Field(() => [String], { nullable: true })
     @Prop()
     photoUrls: string[];
 
@@ -28,7 +28,7 @@ export class EventModel {
     @Prop()
     type?: string;
 
-    @Field(() => String)
+    @Field(() => String, { nullable: true })
     @Prop()
     address?: string;
 
@@ -40,10 +40,21 @@ export class EventModel {
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: "UserModel" })
     going?: UserModel[];
 
-    // date start
-    // date end
-    // price
-    // security
+    @Field(() => String)
+    @Prop()
+    dateStart?: String
+
+    @Field(() => String)
+    @Prop()
+    dateEnd?: String
+
+    @Field(() => String)
+    @Prop()
+    price?: String
+
+    @Field(() => String)
+    @Prop()
+    security?: String
 
     @Field(() => String, { nullable: true })
     @Prop()

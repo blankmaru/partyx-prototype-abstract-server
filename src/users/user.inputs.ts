@@ -16,15 +16,6 @@ export class CreateUserInput {
 
     @Field(() => String)
     avatarUrl?: string;
-
-    @Field(() => [EventModel])
-    events: [EventModel]
-
-    @Field(() => [EventModel])
-    posts: [EventModel]
-
-    @Field(() => [CommentModel])
-    comments: [CommentModel]
 }
 
 @InputType()

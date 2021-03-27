@@ -12,6 +12,11 @@ export class EventService {
         private readonly eventModel: Model<EventDocument>
     ) { }
 
+    async getAll() {
+        return await this.eventModel
+            .find({})
+    }
+
     async list(filters: ListEventInput) {
         return await this.eventModel
             .find({ ...filters })

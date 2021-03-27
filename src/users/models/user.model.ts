@@ -10,7 +10,6 @@ import { PostModel } from 'src/post/models/post.model';
 @Schema()
 export class UserModel {
     @Field(() => String)
-    @Prop()
     _id: MongooseSchema.Types.ObjectId;
 
     @Field(() => String)
@@ -23,23 +22,23 @@ export class UserModel {
 
     @Field(() => String)
     @Prop()
-    description: string;
+    description?: string;
 
     @Field(() => String)
     @Prop()
-    avatarUrl: string;
+    avatarUrl?: string;
 
     @Field(() => [EventModel])
     @Prop([{ type: MongooseSchema.Types.ObjectId, ref: "EventModel" }])
-    events: [EventModel]
+    events?: [EventModel]
 
     @Field(() => [EventModel])
     @Prop([{ type: MongooseSchema.Types.ObjectId, ref: "PostModel" }])
-    posts: [PostModel]
+    posts?: [PostModel]
 
     @Field(() => [CommentModel])
     @Prop([{ type: MongooseSchema.Types.ObjectId, ref: "CommentModel" }])
-    comments: [CommentModel]
+    comments?: [CommentModel]
 }
 
 export type UserDocument = UserModel & Document;

@@ -9,6 +9,11 @@ export class EventResolver {
    constructor(private readonly eventService: EventService) {}
 
    @Query(() => EventModel)
+   async events() {
+      return this.eventService.getAll();
+   }
+
+   @Query(() => EventModel)
    async event(
        @Args('_id', {type: () => String})
        _id: MongooseSchema.Types.ObjectId

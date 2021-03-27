@@ -3,7 +3,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 import { UserModel } from 'src/users/models/user.model';
 
-@ObjectType()
+@ObjectType('Comment')
 @InputType('CommentInput')
 @Schema()
 export class CommentModel {

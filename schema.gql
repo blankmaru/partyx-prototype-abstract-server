@@ -2,7 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type CommentModel {
+type Comment {
   _id: String!
   user: UserModel!
   text: String!
@@ -11,12 +11,16 @@ type CommentModel {
 type EventModel {
   _id: String!
   title: String
-  photoUrls: [String!]!
+  photoUrls: [String!]
   description: String
   type: String
-  address: String!
+  address: String
   tags: [String!]
   going: [UserModel!]
+  dateStart: String!
+  dateEnd: String!
+  price: String!
+  security: String!
   date: String
 }
 
@@ -28,7 +32,7 @@ type UserModel {
   avatarUrl: String!
   events: [EventModel!]!
   posts: [EventModel!]!
-  comments: [CommentModel!]!
+  comments: [Comment!]!
 }
 
 input CommentInput {
@@ -40,12 +44,16 @@ input CommentInput {
 input EventInput {
   _id: String!
   title: String
-  photoUrls: [String!]!
+  photoUrls: [String!]
   description: String
   type: String
-  address: String!
+  address: String
   tags: [String!]
   going: [UserInput!]
+  dateStart: String!
+  dateEnd: String!
+  price: String!
+  security: String!
   date: String
 }
 
@@ -63,7 +71,8 @@ input UserInput {
 type Query {
   user(_id: String!): UserModel!
   users(filters: ListUserInput): [UserModel!]!
-  comment(_id: String!): CommentModel!
+  comment(_id: String!): Comment!
+  events: EventModel!
   event(_id: String!): EventModel!
 }
 
@@ -77,9 +86,9 @@ type Mutation {
   createUser(payload: CreateUserInput!): UserModel!
   updateUser(payload: UpdateUserInput!): UserModel!
   deleteUser(_id: String!): UserModel!
-  createComment(payload: CreateCommentInput!): CommentModel!
-  updateComment(payload: UpdateCommentInput!): CommentModel!
-  deleteComment(_id: String!): CommentModel!
+  createComment(payload: CreateCommentInput!): Comment!
+  updateComment(payload: UpdateCommentInput!): Comment!
+  deleteComment(_id: String!): Comment!
   createEvent(payload: CreateEventInput!): EventModel!
   deleteEvent(_id: String!): EventModel!
 }
@@ -89,9 +98,6 @@ input CreateUserInput {
   password: String!
   description: String!
   avatarUrl: String!
-  events: [EventInput!]!
-  posts: [EventInput!]!
-  comments: [CommentInput!]!
 }
 
 input UpdateUserInput {
