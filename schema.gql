@@ -1,0 +1,122 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CommentModel {
+  _id: String!
+  user: UserModel!
+  text: String!
+}
+
+type EventModel {
+  _id: String!
+  title: String
+  photoUrls: [String!]!
+  description: String
+  type: String
+  address: String!
+  tags: [String!]
+  going: [UserModel!]
+  date: String
+}
+
+type UserModel {
+  _id: String!
+  name: String!
+  password: String
+  description: String!
+  avatarUrl: String!
+  events: [EventModel!]!
+  posts: [EventModel!]!
+  comments: [CommentModel!]!
+}
+
+input CommentInput {
+  _id: String!
+  user: UserInput!
+  text: String!
+}
+
+input EventInput {
+  _id: String!
+  title: String
+  photoUrls: [String!]!
+  description: String
+  type: String
+  address: String!
+  tags: [String!]
+  going: [UserInput!]
+  date: String
+}
+
+input UserInput {
+  _id: String!
+  name: String!
+  password: String
+  description: String!
+  avatarUrl: String!
+  events: [EventInput!]!
+  posts: [EventInput!]!
+  comments: [CommentInput!]!
+}
+
+type Query {
+  user(_id: String!): UserModel!
+  users(filters: ListUserInput): [UserModel!]!
+  comment(_id: String!): CommentModel!
+  event(_id: String!): EventModel!
+}
+
+input ListUserInput {
+  name: String
+  description: String
+  avatarUrl: String
+}
+
+type Mutation {
+  createUser(payload: CreateUserInput!): UserModel!
+  updateUser(payload: UpdateUserInput!): UserModel!
+  deleteUser(_id: String!): UserModel!
+  createComment(payload: CreateCommentInput!): CommentModel!
+  updateComment(payload: UpdateCommentInput!): CommentModel!
+  deleteComment(_id: String!): CommentModel!
+  createEvent(payload: CreateEventInput!): EventModel!
+  deleteEvent(_id: String!): EventModel!
+}
+
+input CreateUserInput {
+  name: String!
+  password: String!
+  description: String!
+  avatarUrl: String!
+  events: [EventInput!]!
+  posts: [EventInput!]!
+  comments: [CommentInput!]!
+}
+
+input UpdateUserInput {
+  name: String
+  description: String
+  avatarUrl: String
+}
+
+input CreateCommentInput {
+  user: UserInput!
+  text: String!
+}
+
+input UpdateCommentInput {
+  user: UserInput!
+  text: String
+}
+
+input CreateEventInput {
+  title: String
+  photoUrls: [String!]!
+  description: String
+  type: String
+  address: String!
+  tags: [String!]
+  going: [UserInput!]
+  date: String
+}

@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-indive-dev-103559-authRole",
+      "UnauthRoleArn": "arn:aws:iam::685914890810:role/amplify-indive-dev-103559-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::685914890810:role/amplify-indive-dev-103559-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-indive-dev-103559-deployment",
+      "UnauthRoleName": "amplify-indive-dev-103559-unauthRole",
+      "StackName": "amplify-indive-dev-103559",
+      "StackId": "arn:aws:cloudformation:eu-west-1:685914890810:stack/amplify-indive-dev-103559/79650af0-8ed7-11eb-9519-02fb857f0dc7",
+      "AmplifyAppId": "d3voo6igtlm6ty"
+    }
+  }
+}

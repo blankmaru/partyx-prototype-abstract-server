@@ -1,0 +1,80 @@
+scalar Date
+scalar DateTime
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Post {
+  id: ID!
+  title: String
+  description: String
+  comments: [Comment]
+}
+
+type User {
+  id: ID!
+  name: String
+  description: String
+  avatarUrl: String
+  events: [Event]
+  posts: [Post]
+  comments: [Comment] #comments about this user
+}
+
+enum EventTypes {
+  music
+  party
+  education
+  sport
+}
+
+type Comment {
+  id: ID!
+  user: User
+  text: String
+}
+
+type Event {
+  id: ID!
+  photoUrls: [String]
+  title: String
+  description: String
+  type: EventTypes
+  tags: [String]
+  organization: Organization
+  comments: [Comment]
+  going: [User]
+  date: DateTime
+}
+
+type Organization {
+  id: ID!
+  name: String
+  description: String
+  events: [Event]
+  posts: [Post]
+  comments: [Comment] #comments about this organization
+}
+
+
+type Query {
+  users: [User]
+  user(id: ID!): User
+  events: [Event]
+  event(id: ID!): Event
+  organizations: [Organization]
+  organization(id: ID): Organization
+}
+
+type Mutation {
+  addUser(user: userCreateInput):User
+  updateUser(user: userUpdateInput):User
+  addUserPost(userId: ID!,post: postCreateInput): Post
+  addUserComment(eventId:ID!,comment: Comment): Comment
+  #input пропишите сами, предлагаю инфу про организации
+  # и ивенты уже забить в систему, но если будет время
+  # (конечно будет, вам почти ничего не надо делать)
+  # то реализовуйте и эти запросы
+}
