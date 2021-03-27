@@ -10,6 +10,12 @@ export class OrganizationResolver {
         private readonly orgService: OrganizationService
     ) { }
 
+    @Query(() => [OrganizationModel])
+   async events() {
+      const res = await this.orgService.getAll();
+      return res;
+   }
+
     @Query(() => OrganizationModel)
     async org(
         @Args('_id', { type: () => String })

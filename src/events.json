@@ -47,19 +47,19 @@
           "description": "Christmas PARTY - december 25TH",
           "type": "Party",
           "address": "Online",
-          "tags": ["Blockchain", "conferense"],
+          "tags": ["Christmas", "Party"],
           "going": [
               {
-                "name": "Nikita Alexeev",
-                "description": "I love table tennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/47715935?s=460&u=a6f94045800d6e84e0d4dcd0d05bae5de127b88b&v=4",
+                "name": "Yeva Popova",
+                "description": "I wanna go to the event",
+                "avatarUrl": "https://sociumin.com/img.php?i=https://sun1-86.userapi.com/s/v1/if1/1v7TD1mB4H68zQpxLnFGzc0yX4v9eonOGfXPNXgliAywYu8dVk_bJZOtI_8IuNzxjvfZxUTC.jpg?size=400x0&quality=96&crop=0,158,1152,1723&ava=1",
                 "comments": [],
                 "posts": []
               }
           ],
-          "dateStart": "27 March",
-          "dateEnd": "28 March",
-          "date": "25.3.2021",
+          "dateStart": "25 December",
+          "dateEnd": "31 December",
+          "date": "25.12.2021",
           "security": "Verified"
       }
 ]

@@ -11,6 +11,10 @@ export class OrganizationService {
         private readonly orgModel: Model<OrgDocument>
     ) { }
 
+    async getAll() {
+        return await this.orgModel.find({}).exec()
+    }
+
     async list(filters: ListOrgInput) {
         return await this.orgModel
             .find({ ...filters })

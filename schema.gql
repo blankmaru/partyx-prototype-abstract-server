@@ -104,7 +104,7 @@ type Query {
   user(_id: String!): UserModel!
   users(filters: ListUserInput): [UserModel!]!
   comment(_id: String!): Comment!
-  events: [EventModel!]!
+  events: [OrganizationModel!]!
   event(_id: String!): EventModel!
   org(_id: String!): OrganizationModel!
 }
