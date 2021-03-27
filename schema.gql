@@ -24,6 +24,13 @@ type EventModel {
   date: String
 }
 
+type PostModel {
+  title: String!
+  description: String!
+  event: String!
+  comments: [Comment!]!
+}
+
 type UserModel {
   _id: String!
   name: String!
@@ -32,6 +39,15 @@ type UserModel {
   avatarUrl: String!
   events: [EventModel!]!
   posts: [EventModel!]!
+  comments: [Comment!]!
+}
+
+type OrganizationModel {
+  _id: String!
+  name: String!
+  description: String!
+  events: [EventModel!]!
+  posts: [PostModel!]!
   comments: [Comment!]!
 }
 
@@ -57,6 +73,13 @@ input EventInput {
   date: String
 }
 
+input PostInput {
+  title: String!
+  description: String!
+  event: String!
+  comments: [CommentInput!]!
+}
+
 input UserInput {
   _id: String!
   name: String!
@@ -68,12 +91,22 @@ input UserInput {
   comments: [CommentInput!]!
 }
 
+input OrganizationInput {
+  _id: String!
+  name: String!
+  description: String!
+  events: [EventInput!]!
+  posts: [PostInput!]!
+  comments: [CommentInput!]!
+}
+
 type Query {
   user(_id: String!): UserModel!
   users(filters: ListUserInput): [UserModel!]!
   comment(_id: String!): Comment!
-  events: EventModel!
+  events: [EventModel!]!
   event(_id: String!): EventModel!
+  org(_id: String!): OrganizationModel!
 }
 
 input ListUserInput {
@@ -91,6 +124,9 @@ type Mutation {
   deleteComment(_id: String!): Comment!
   createEvent(payload: CreateEventInput!): EventModel!
   deleteEvent(_id: String!): EventModel!
+  createOrg(payload: CreateOrgInput!): OrganizationModel!
+  updateOrg(payload: UpdateOrgInput!): OrganizationModel!
+  deleteOrg(_id: String!): OrganizationModel!
 }
 
 input CreateUserInput {
@@ -121,8 +157,28 @@ input CreateEventInput {
   photoUrls: [String!]!
   description: String
   type: String
+  dateStart: String!
+  dateEnd: String!
+  price: String!
+  security: String!
   address: String!
   tags: [String!]
   going: [UserInput!]
   date: String
+}
+
+input CreateOrgInput {
+  name: String!
+  description: String!
+  events: [EventInput!]!
+  posts: [PostInput!]!
+  comments: [CommentInput!]!
+}
+
+input UpdateOrgInput {
+  name: String
+  description: String
+  events: [EventInput!]
+  posts: [PostInput!]!
+  comments: [CommentInput!]!
 }

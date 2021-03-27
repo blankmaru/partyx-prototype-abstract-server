@@ -37,7 +37,7 @@ export class EventModel {
     tags?: string[];
 
     @Field(() => [UserModel], { nullable: true })
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: "UserModel" })
+    @Prop()
     going?: UserModel[];
 
     @Field(() => String)

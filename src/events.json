@@ -1,0 +1,65 @@
+[
+    {
+        "title": "JS Hiring Day",
+        "photoUrls": ["https://s.dou.ua/CACHE/images/img/events/dou_2_8vshY7w/92dc99d9ef016824b85efe4465e6aa21.png"],
+        "description": "Have a choice and make it for the benefit of the environment! On March 27, we will offer you both options! At JS Hiring Day you will be able to choose a project and an eco-mobile gift. There will be two of them at once: a futuristic unicycle or an urban electric bicycle.",
+        "type": "Hiring",
+        "address": "Online",
+        "tags": ["javascript", "carrier", "seminar"],
+        "going": [
+            {
+              "name": "Maxim Budnik",
+              "description": "I fullstack JS developer",
+              "avatarUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Ramphastos_toco_Whipsnade_Zoo.jpg",
+              "comments": [],
+              "posts": []
+            }
+        ],
+        "dateStart": "10:00",
+        "dateEnd": "18:00",
+        "date": "1.3.2021",
+        "security": "Verified"
+      },
+      {
+      "title": "Blockchain Hackaton",
+        "photoUrls": ["https://s.dou.ua/CACHE/images/img/events/1080%D1%851080_/4cd91049bee55105f8b78ae9e2edee2a.png"],
+        "description": "Nine Blockchain Hackathon 2021 in an updated online format starts 26 birch at 18:00!",
+        "type": "Contest",
+        "address": "Online",
+        "tags": ["Blockchain", "conferense"],
+        "going": [
+            {
+              "name": "Nikita Alexeev",
+              "description": "I love table tennis",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/47715935?s=460&u=a6f94045800d6e84e0d4dcd0d05bae5de127b88b&v=4",
+              "comments": [],
+              "posts": []
+            }
+        ],
+        "dateStart": "27 March",
+        "dateEnd": "28 March",
+        "date": "25.3.2021",
+        "security": "Verified"
+    },
+    {
+        "title": "Christmas PARTY",
+          "photoUrls": ["https://s.dou.ua/CACHE/images/img/events/1080%D1%851080_/4cd91049bee55105f8b78ae9e2edee2a.png"],
+          "description": "Christmas PARTY - december 25TH",
+          "type": "Party",
+          "address": "Online",
+          "tags": ["Blockchain", "conferense"],
+          "going": [
+              {
+                "name": "Nikita Alexeev",
+                "description": "I love table tennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/47715935?s=460&u=a6f94045800d6e84e0d4dcd0d05bae5de127b88b&v=4",
+                "comments": [],
+                "posts": []
+              }
+          ],
+          "dateStart": "27 March",
+          "dateEnd": "28 March",
+          "date": "25.3.2021",
+          "security": "Verified"
+      }
+]

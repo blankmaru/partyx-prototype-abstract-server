@@ -4,7 +4,6 @@ import {CommentModel} from '../comments/models/comment.model'
 
 @InputType()
 export class CreatePostInput {
-
     @Field(() => String)
     title?: string;
 

@@ -18,6 +18,18 @@ export class CreateEventInput {
     type?: string;
 
     @Field(() => String)
+    dateStart?: String
+
+    @Field(() => String)
+    dateEnd?: String
+
+    @Field(() => String)
+    price?: String
+
+    @Field(() => String)
+    security?: String
+
+    @Field(() => String)
     address?: string;
 
     @Field(() => [String], { nullable: true })

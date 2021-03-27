@@ -8,9 +8,10 @@ import {CreateEventInput} from './event.input'
 export class EventResolver {
    constructor(private readonly eventService: EventService) {}
 
-   @Query(() => EventModel)
+   @Query(() => [EventModel])
    async events() {
-      return this.eventService.getAll();
+      const res = await this.eventService.getAll();
+      return res;
    }
 
    @Query(() => EventModel)

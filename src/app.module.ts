@@ -8,6 +8,7 @@ import { UserModule } from './users/models/user.module';
 import { AuthModule } from './auth/auth.module';
 import { CommentModule } from './comments/models/comment.module';
 import { EventModule } from './event/event.module';
+import { OrganizationModule } from './organization/organization.module';
 
 @Module({
   imports: [
@@ -19,7 +20,8 @@ import { EventModule } from './event/event.module';
     UserModule,
     AuthModule,
     CommentModule,
-    EventModule
+    EventModule,
+    OrganizationModule
   ],
   controllers: [AppController],
   providers: [AppService],

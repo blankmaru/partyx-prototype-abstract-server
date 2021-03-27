@@ -13,8 +13,7 @@ export class EventService {
     ) { }
 
     async getAll() {
-        return await this.eventModel
-            .find({})
+        return await this.eventModel.find({}).exec()
     }
 
     async list(filters: ListEventInput) {
