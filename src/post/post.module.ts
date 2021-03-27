@@ -1,4 +1,14 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { PostModel, PostSchema } from './models/post.model';
+import { PostService } from './post.service';
+import { PostResolver } from './post.resolver'
 
-@Module({})
-export class PostModule {}
+@Module({
+    imports: [
+        MongooseModule.forFeature([{ name: PostModel.name, schema: PostSchema }]),
+    ],
+    providers: [PostService, PostResolver],
+    exports: [PostService]
+})
+export class PostModule { }
